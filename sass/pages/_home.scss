@@ -1,0 +1,19 @@
+/* == Intro
+============================= */
+.intro__title {
+  @include font-size(calc(1.57143vw + 36.57143px), 800);
+  text-transform: capitalize;
+}
+
+.intro__span {
+  background-color: $primary-color;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.intro__para {
+  @include font-size(24px);
+  color: $gray-color;
+  margin-top: 24px;
+}

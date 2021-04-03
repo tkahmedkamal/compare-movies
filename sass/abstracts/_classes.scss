@@ -1,0 +1,34 @@
+.center--vertically {
+  @include flex-box();
+  @include align-items();
+  height: 100vh;
+}
+
+.site--radius {
+  @include prefix(border-radius, 3px, webkit moz o mz);
+}
+
+.img--fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.is--success {
+  background-color: $green-color-opacity !important;
+  border: 1px solid $green-color !important;
+
+  .compare__list-title,
+  .compare__list-subtitle {
+    color: #007e57 !important;
+  }
+}
+
+.is--failure {
+  background-color: $red-color-opacity !important;
+  border: 1px solid $red-color !important;
+
+  .compare__list-title,
+  .compare__list-subtitle {
+    color: #7e0000 !important;
+  }
+}

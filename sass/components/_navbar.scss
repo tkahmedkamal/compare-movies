@@ -1,0 +1,9 @@
+/* == Navbar
+============================= */
+.navbar {
+  @include absolute($top: 0, $left: 0);
+  z-index: 2;
+  width: 100%;
+  padding: 35px 0;
+  background-color: #fff;
+}

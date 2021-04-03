@@ -1,0 +1,21 @@
+/* == Button
+============================= */
+.site--btn {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 19px 25px;
+  border: 0;
+  text-transform: capitalize;
+  margin-top: 40px;
+  cursor: pointer;
+  @include font-size(18px, 700);
+  @include prefix(transition, background-color 0.3s, ease-in);
+
+  img {
+    margin-left: 16px;
+  }
+
+  &:hover {
+    background-color: $black-color;
+  }
+}

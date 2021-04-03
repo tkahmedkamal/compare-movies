@@ -1,0 +1,83 @@
+/// Mixin to prefix a property
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+/// Mixin for offset positioning
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// Shorthand mixin for absolute positioning
+@mixin absolute($args...) {
+  @include position(absolute, $args...);
+}
+
+// Shorthand mixin for relative positioning
+@mixin relative($args...) {
+  @include position(relative, $args...);
+}
+
+// Shorthand mixin for fixed positioning
+@mixin fixed($args...) {
+  @include position(fixed, $args...);
+}
+
+/// Mixin for flex-box
+@mixin flex-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/// Mixin for flex-direction
+@mixin flex-direction($direction) {
+  @if $direction == column {
+    -webkit-flex-direction: vertical;
+    -moz-flex-direction: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  } @else {
+    -webkit-flex-direction: horizontal;
+    -moz-flex-direction: horizontal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+/// Mixin for justify-content
+@mixin justify-content() {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/// Mixin for align-items
+@mixin align-items() {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+// Font Size
+@mixin font-size($size: null, $weight: null) {
+  font-size: $size;
+  font-weight: $weight;
+}

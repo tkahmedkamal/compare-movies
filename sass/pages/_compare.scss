@@ -1,0 +1,113 @@
+/* == Compare
+============================= */
+.fake__layer {
+  height: 138px; // The same height as the navbar
+}
+
+.compare {
+  @include absolute($top: 0, $left: 0);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: none;
+}
+
+.compare__content {
+  padding-top: 64px;
+}
+
+.compare__search {
+  width: 100%;
+  padding: 22px;
+  border: 1px solid $gray-color;
+  color: $black-color;
+  @include font-size(18px);
+
+  &::placeholder {
+    color: $gray-color;
+  }
+}
+
+.compare__dropdown {
+  @include relative();
+  width: 450px;
+  display: inline-flex;
+  vertical-align: top;
+}
+
+.compare__dropdown-menu {
+  @include absolute($top: 100%, $left: 0);
+  z-index: 99;
+  width: 100%;
+  padding-top: 4px;
+}
+
+.compare__dropdown-content {
+  max-height: 500px;
+  background-color: #fff;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  overflow-y: scroll;
+  @include prefix(box-shadow, 0 2px 3px rgb(10 10 10 / 10%), webkit moz o ms);
+}
+
+.compare__dropdown-item {
+  @include flex-box();
+  @include align-items();
+  @include relative();
+  @include font-size(14px);
+  width: 100%;
+  height: 60px;
+  padding: 6px 16px;
+  line-height: 1.5;
+  white-space: nowrap;
+  cursor: pointer;
+
+  img {
+    height: 50px;
+    margin-right: 10px;
+  }
+}
+
+.compare__media {
+  @include flex-box();
+}
+
+.compare__media-image {
+  width: 140px;
+}
+
+.compare__media-content {
+  margin-left: 16px;
+}
+
+.compare__media-title {
+  @include font-size(32px, 700);
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.compare__media-subtitle {
+  @include font-size(20px);
+  margin-bottom: 12px;
+}
+
+.compare__media-para {
+  @include font-size(18px);
+  color: $gray-color;
+  line-height: 1.5;
+}
+
+.compare__list {
+  background-color: #eee;
+  color: $gray-color;
+  border: 1px solid transparent;
+  margin-top: 24px;
+  padding: 46px 32px;
+}
+
+.compare__list-title {
+  @include font-size(24px, 700);
+  margin-bottom: 16px;
+}

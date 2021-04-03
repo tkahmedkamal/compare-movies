@@ -1,0 +1,22 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $Sen;
+  color: $black-color;
+}
+
+button,
+input {
+  outline: 0;
+}
+
+::selection {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: $primary-color;
+  color: #fff;
+}
